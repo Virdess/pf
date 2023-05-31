@@ -4,6 +4,7 @@ import CategoryView from "../views/CategoryView.vue";
 import ProductView from "../views/ProductView.vue";
 import CartView from "@/views/CartView.vue";
 import LoginPage from "@/components/organisms/LoginPage.vue"
+import CheckOutPage from "@/views/CheckoutPage"
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     name: "Cart",
     component: CartView,
   },
+  {
+    path:"/checkout",
+    name:"Checkout",
+    component:CheckOutPage
+  }
 ];
 
 const router = createRouter({

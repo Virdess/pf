@@ -16,7 +16,7 @@
         />
       </div>
       <div class="text-right">
-        <h4>Total: {{ formatCurrency(cartTotal) }}</h4>
+        <h4>Всего: {{ formatCurrency(cartTotal) }}</h4>
         <IonButton color="success" href="/checkout">Завершить заказ</IonButton>
       </div>
     </div>
