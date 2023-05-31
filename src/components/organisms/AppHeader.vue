@@ -71,7 +71,7 @@ export default {
   computed: {
     ...mapState({
       categories: (state) => state.categories,
-      products: (state) => state.products,
+      products: (state) => state.products.products,
     }),
     ...mapGetters(["cartQuantity", "productsLoaded"]),
   },
