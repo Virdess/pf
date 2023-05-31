@@ -3,10 +3,20 @@ import HomeView from "../views/HomeView.vue";
 import CategoryView from "../views/CategoryView.vue";
 import ProductView from "../views/ProductView.vue";
 import CartView from "@/views/CartView.vue";
+import LoginPage from "@/components/organisms/LoginPage.vue"
 
 const routes = [
   {
-    path: "/",
+    path:'/',
+    redirect:'/login'
+  },
+  {
+    path:'/login',
+    name:"LoginPage",
+    component:LoginPage
+  },
+  {
+    path: "/home",
     name: "Home",
     component: HomeView,
   },

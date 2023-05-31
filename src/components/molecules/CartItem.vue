@@ -6,7 +6,7 @@
         class="router-link"
       >
         <img
-          :src="product.images[0]"
+          :src="product.thumbnail"
           class="card-img-top product-image"
           :alt="product.title"
         />

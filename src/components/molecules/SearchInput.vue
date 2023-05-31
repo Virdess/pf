@@ -20,7 +20,7 @@
           class="list-group-item"
           @click="onResultClick(result.id)"
         >
-          <img :src="result.image" :alt="result.title" class="result-image" />
+          <img :src="result.thumbnail" :alt="result.title" class="result-image" />
 
           <p>
             {{ result.title }}

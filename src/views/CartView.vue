@@ -17,7 +17,7 @@
       </div>
       <div class="text-right">
         <h4>Total: {{ formatCurrency(cartTotal) }}</h4>
-        <button class="btn btn-success" @click="checkout">Завершить заказ</button>
+        <IonButton color="success" href="/checkout">Завершить заказ</IonButton>
       </div>
     </div>
   </div>
@@ -27,12 +27,14 @@
 import { mapActions, mapGetters } from "vuex";
 import CartItem from "@/components/molecules/CartItem.vue";
 import formatCurrency from "@/utils/formatCurrency";
+import { IonButton } from "@ionic/vue";
 
 export default {
   name: "CartView",
   components: {
     CartItem,
-  },
+    IonButton
+},
   computed: {
     ...mapGetters(["cartItems", "cartTotal"]),
   },

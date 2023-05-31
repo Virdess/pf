@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-md-6">
           <img
-            :src="product.images[0]"
+            :src="product.thumbnail"
             :alt="product.title"
             class="img-fluid rounded"
           />

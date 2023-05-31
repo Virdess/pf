@@ -1,21 +1,19 @@
 <template>
-  <div class="home">
-    <HomeBanner />
-    <div v-if="!productsLoaded">
-      <LoadingSpinner />
-    </div>
-    <div class="container" v-else>
-      <div class="row">
-        <div
-          v-for="product in products"
-          :key="product.id"
-          class="col-xl-4 col-md-6 col-12 d-flex justify-content-center align-items-center"
-        >
-          <CardItem v-if="product.category != 'jewelery' && product.category != 'electronics'" :item="addRatingToProduct(product)" />
+      <div class="home">
+        <HomeBanner />
+        <div v-if="!productsLoaded">
+          <LoadingSpinner />
+        </div>
+        <div class="container" v-else>
+          <div class="row">
+            <div v-for="product in products" :key="product.id"
+              class="col-xl-4 col-md-6 col-12 d-flex justify-content-center align-items-center">
+              <CardItem v-if="product.category != 'jewelery' && product.category != 'electronics'"
+                :item="addRatingToProduct(product)" />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -50,7 +48,7 @@ export default {
   components: {
     CardItem,
     HomeBanner,
-    LoadingSpinner,
+    LoadingSpinner
   },
 };
 </script>
